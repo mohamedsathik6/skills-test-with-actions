@@ -19,7 +19,12 @@ on:
 
 jobs:
   log-the-inputs:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, cicdframework]
+    strategy:                             
+      matrix:
+        version: [20, 22, 24]
+        os: [ubuntu-latest, windows-latest]
+    
     steps:
       - run: |
           echo "Log level: $LEVEL"
