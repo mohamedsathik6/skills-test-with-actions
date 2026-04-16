@@ -19,7 +19,7 @@ on:
 
 jobs:
   log-the-inputs:
-    runs-on: [self-hosted, cicdframework]
+    runs-on: self-hosted
     strategy:                             
       matrix:
         version: [20, 22, 24]
